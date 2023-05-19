@@ -50,7 +50,13 @@ export const QuestionContext = ({children}) => {
 
   return (
     <questionsContext.Provider value={{questions, setQuestions, getQuestions, items, setItems, insertForm, help, setHelp, setInsertForm, questionForEditing, setQuestionForEditing, createQuestion, editQuestion, deleteQuestion}}>
-        {children}
+        {
+          questions.length === 0 ? <div className="vw-100 vh-100 d-flex flex-column justify-content-center align-items-center bg-black">
+            <h5 className="text-light mb-4">Conectando con la base de datos, esto podría demorar unos segundos debido a que el hosting es gratuito y la velocidad no es su fuerte 😅</h5>
+            <div className="spinner-border text-green" role="status">
+          <span className="visually-hidden text-green">Loading...</span>
+        </div></div> : children
+        }
     </questionsContext.Provider>
   )
 };
