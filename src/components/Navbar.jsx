@@ -16,7 +16,7 @@ export const Navbar = () => {
 
   return (
     <nav className="d-flex justify-content-between align-items-center shadow-navbar text-green py-3 px-4">
-      <h1 onClick={handleAnimated} className={`${animation} m-0 text-green title-navbar fw-bold`}>RePasadoAndoRepasando</h1>
+      <h1 onClick={handleAnimated} className={`${animation} m-0 text-green title-navbar fw-bold`}>StudyProyect</h1>
       <div className="d-flex justify-content-center align-items-center text-green">
         <a
           href="https://github.com/ferOlguiin?tab=repositories"
